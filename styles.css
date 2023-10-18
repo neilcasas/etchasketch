@@ -1,41 +1,55 @@
 body {
     padding: 0;
     margin: 0;
-    border: 2px dotted red;
     background-color: whitesmoke;
 }
 
-div.main-container {
+.main-container {
     display: flex;
     height: 100vh;
     flex-direction: column;
     align-items: center;
 }
 
-div.header {
+.header {
     padding: 20px;
     font-size: 72px;
     font-family: monospace;
 }
 
-div.body {
+/* Main */
+.content {
     display: flex;
     flex: 1;
 }
 
-div.interact-container {
+.interact-container {
     display: flex;
     flex: 1;
     align-items: center;
     border: 1px solid black;
 }
 
-div.button-container {
+.button-container {
+    padding: 50px;
+    gap: 20px;
     display: flex;
     flex-direction: column;
 }
 
-div.footer {
+.grid-container {
+    padding: 50px;
+}
+
+.grid {
+    display: grid;
+    width: 500px;
+    height: 500px; 
+    border: 1px solid black;
+}
+
+/* footer */
+.footer {
     padding: 20px;
     font-family: monospace;
 }
