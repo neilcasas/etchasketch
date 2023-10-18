@@ -68,8 +68,9 @@ button:hover {
     display: grid;
     width: 500px;
     height: 500px; 
-    border: 1px solid black;
+    border: 1px solid rgb(148, 148, 148);
     background-color: white;
+    box-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.5);
 }
 
 .grid-size {
