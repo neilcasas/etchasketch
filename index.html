@@ -12,16 +12,16 @@
         <div class="content">
             <div class="interact-container">
                 <div class="button-container">
-                    <button>Black</button>
-                    <button>Gray</button>
+                    <button onclick ="changeColor('black')">Black</button>
+                    <button onclick ="changeColor('blue')">Blue</button>
                     <button>Rainbow mode</button>
-                    <button>Eraser</button>
+                    <button onclick ="changeColor('white')">Eraser</button>
                     <button>Clear</button>
                 </div>
                 <div class="grid-container">
                     <div class ="grid">
                     </div>
-                    <input type ="text" placeholder="Size of Grid" value="16" onchange="changeSize(this.value)"/>
+                    <input type ="text" placeholder="Size of Grid" onchange="changeSize(this.value)"/>
                     <button>Set Size</button>
                 </div>
             </div>

@@ -1,3 +1,4 @@
+let color = "black";
 // Create grid based on parameter size
 function createGrid(size){
     let grid = document.querySelector('.grid');
@@ -6,7 +7,8 @@ function createGrid(size){
     
     for (let i = 0; i < size*size; i++) {
         let gridElement = document.createElement('div');
-        gridElement.style.backgroundColor = 'blue';
+        gridElement.style.backgroundColor = 'white';
+        gridElement.addEventListener('mouseover', colorGrid);
         grid.insertAdjacentElement('beforeend', gridElement);
     }
 }
@@ -16,4 +18,13 @@ function changeSize(input){
     if(input => 2 && input <= 100) createGrid(input);
     else
         console.log("error");
+}
+
+// Color grid
+function colorGrid(){
+    this.style.backgroundColor = color;
+}
+
+function changeColor(choice){
+    color = choice;
 }
