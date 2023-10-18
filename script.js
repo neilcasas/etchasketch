@@ -1,5 +1,6 @@
 let color = 'black';
-let click = 'true';
+let click = true;
+
 // Create grid based on parameter size
 function createGrid(size){
     let grid = document.querySelector('.grid');
@@ -27,7 +28,7 @@ function changeSize(input){
 
 // Color grid
 function colorGrid(){
-    if(click ==='true') {
+    if(click) {
         if(color === 'random'){
             this.style.backgroundColor =`hsl(${Math.random() * 360}, 100%, 50%)`
         } else {
@@ -47,3 +48,15 @@ function resetBoard(){
     let gridElements = grid.querySelectorAll("div");
     gridElements.forEach((div) => div.style.backgroundColor = 'white');
 }
+
+// Toggle between drawing and not drawing
+document.querySelector("body").addEventListener("click", (e) => {
+    if(e.target.tagName != "BUTTON") {
+        click = !click;
+        if (click) {
+            document.querySelector('.mode').textContent = "Mode: Coloring";
+        } else {
+            document.querySelector('.mode').textContent = "Mode: Not Coloring";
+        }
+    }
+});
