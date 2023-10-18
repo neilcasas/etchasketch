@@ -1,5 +1,7 @@
+// Variable declaration
 let color = 'black';
 let click = true;
+let gridError = document.querySelector('.grid-error');
 
 // Create grid based on parameter size
 function createGrid(size){
@@ -21,8 +23,9 @@ createGrid(16);
 function changeSize(input){
     if(input >= 2 && input <= 100) {
         createGrid(input);
+        gridError.remove(); 
     } else {
-        console.log("error");
+        gridError.textContent = `'${input} by ${input}' is not available.`
     }
 }
 

@@ -22,8 +22,12 @@
                     <div class ="grid">
                     </div>
                     <div class="mode">Mode: Coloring</div>
-                    <input type ="text" placeholder="Size of Grid" value="16" onchange="changeSize(this.value)"/>
-                    <button>Set Size</button>
+                    <div class="grid-size">
+                        <div class ="grid-size-guide">Grid Size</div>
+                        <input type ="text" placeholder="Size of Grid" value="16" onchange="changeSize(this.value)"/>
+                        <button>Set Size</button>
+                        <div class = "grid-error"></div>
+                    </div>
                 </div>
             </div>
         </div>
